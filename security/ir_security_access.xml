@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="subscription_category" model="ir.module.category">
+            <field name="name">subscription</field>
+            <field name="sequence" eval="1"/>
+        </record>
+
+
+       <record id="sub_cont_group_user" model="res.groups">
+           <field name="name">caratRED</field>
+           <field name="category_id" ref="subscription_category"/>
+<!--           <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
+       </record>
+
+        <record id="sub_subscription_group_user" model="res.groups">
+            <field name="name">caratRED subscription</field>
+            <field name="category_id" ref="subscription_category"/>
+<!--            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
+        </record>
+    </data>
+</odoo>
